@@ -1,0 +1,23 @@
+add_executable(test_eds_parser test_eds_parser.cpp)
+target_link_libraries(test_eds_parser PRIVATE can_node_sim_core)
+add_test(NAME test_eds_parser COMMAND test_eds_parser)
+
+add_executable(test_pdo_builder test_pdo_builder.cpp)
+target_link_libraries(test_pdo_builder PRIVATE can_node_sim_core)
+add_test(NAME test_pdo_builder COMMAND test_pdo_builder)
+
+add_executable(test_simulator test_simulator.cpp)
+target_link_libraries(test_simulator PRIVATE can_node_sim_core)
+add_test(NAME test_simulator COMMAND test_simulator)
+
+add_executable(test_socketcan_transport test_socketcan_transport.cpp)
+target_link_libraries(test_socketcan_transport PRIVATE can_node_sim_core)
+add_test(NAME test_socketcan_transport COMMAND test_socketcan_transport)
+
+add_executable(test_keywords test_keywords.cpp)
+target_link_libraries(test_keywords PRIVATE can_node_sim_core)
+add_test(NAME test_keywords COMMAND test_keywords)
+
+add_executable(test_config test_config.cpp)
+target_link_libraries(test_config PRIVATE can_node_sim_core)
+add_test(NAME test_config COMMAND test_config)

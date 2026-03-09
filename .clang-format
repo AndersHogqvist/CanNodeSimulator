@@ -1,0 +1,35 @@
+---
+Language: Cpp
+BasedOnStyle: Google
+ColumnLimit: 100
+AccessModifierOffset: "-2"
+AllowAllConstructorInitializersOnNextLine: true
+BreakBeforeBraces: Custom
+BraceWrapping:
+  BeforeElse: true
+BreakConstructorInitializers: BeforeComma
+CommentPragmas: "^ IWYU pragma:"
+ForEachMacros:
+  - foreach
+  - Q_FOREACH
+  - BOOST_FOREACH
+IncludeCategories:
+  - Regex: '^"(llvm|llvm-c|clang|clang-c)/'
+    Priority: 2
+    SortPriority: 0
+  - Regex: '^(<|"(gtest|gmock|isl|json)/)'
+    Priority: 3
+    SortPriority: 0
+  - Regex: ".*"
+    Priority: 1
+    SortPriority: 0
+IncludeIsMainRegex: "(Test)?$"
+IncludeIsMainSourceRegex: ""
+PointerAlignment: Right
+DerivePointerAlignment: false
+ConstructorInitializerAllOnOneLineOrOnePerLine: true
+AllowAllArgumentsOnNextLine: true
+BinPackArguments: false
+BinPackParameters: false
+AlignConsecutiveAssignments: Consecutive
+SpaceAfterTemplateKeyword: false

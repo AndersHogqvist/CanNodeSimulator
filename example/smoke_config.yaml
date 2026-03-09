@@ -1,0 +1,24 @@
+# Sample CanNodeSimulator configuration
+# CLI precedence: --node-id overrides node_id from this file.
+
+node_id: 7
+
+od_defaults:
+  # Object key format: "0xINDEX:subindex"
+  # Values are parsed according to EDS DataType.
+  "0x2000:0": 42
+  "0x2001:0": Hello World
+
+pdo_overrides:
+  # RPDO communication object overrides: 0x1400 + (pdo_number - 1)
+  rpdo:
+    1:
+      transmission_type: 254
+
+  # TPDO communication object overrides: 0x1800 + (pdo_number - 1)
+  tpdo:
+    1:
+      cob_id: 0x185
+      transmission_type: 1
+      inhibit_time: 10
+      event_timer: 100

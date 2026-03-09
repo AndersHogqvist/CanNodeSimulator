@@ -1,0 +1,8 @@
+build/
+.cache/
+.venv/
+
+log.html
+output.xml
+report.html
+debug.txt

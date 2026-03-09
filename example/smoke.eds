@@ -1,0 +1,40 @@
+; Minimal EDS for example/smoke.robot
+; Provides:
+; - OD entry 0x2000:0 for Read/Write OD test
+; - OD entry 0x2001:0 for default value test
+; - RPDO1 mapping so List PDO Signals receive 1 is non-empty
+
+[2000sub0]
+ParameterName="ControlWord"
+DataType=0x0005
+AccessType=rw
+DefaultValue=0
+
+[2001sub0]
+ParameterName="ControlWord2"
+DataType=0x0009
+AccessType=ro
+
+[1400sub1]
+ParameterName="RPDO1 COB-ID"
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x200
+
+[1400sub2]
+ParameterName="RPDO1 Transmission Type"
+DataType=0x0005
+AccessType=rw
+DefaultValue=255
+
+[1600sub0]
+ParameterName="RPDO1 Number Of Mapped Objects"
+DataType=0x0005
+AccessType=rw
+DefaultValue=1
+
+[1600sub1]
+ParameterName="RPDO1 Mapping 1"
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x20000008

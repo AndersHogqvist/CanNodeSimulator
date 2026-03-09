@@ -1,0 +1,6 @@
+[submodule "external/RobotRemoteServerCpp"]
+	path = external/RobotRemoteServerCpp
+	url = https://github.com/AndersHogqvist/RobotRemoteServerCpp.git
+[submodule "external/yaml-cpp"]
+	path = external/yaml-cpp
+	url = https://github.com/jbeder/yaml-cpp
